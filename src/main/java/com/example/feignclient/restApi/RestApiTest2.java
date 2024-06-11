@@ -15,9 +15,9 @@ import java.util.ArrayList;
  */
 //FeignClient를 사용한 코드
 
-@FeignClient(name = "restApiTest2", url = "http://localhost:8082")
+@FeignClient(name = "restApiTest2", url = "http://localhost:8080")
 public interface RestApiTest2 {
 
-    @GetMapping("/objects2")
+    @GetMapping("/objects3")
     ArrayList<User> getUserInfo() ;
 }

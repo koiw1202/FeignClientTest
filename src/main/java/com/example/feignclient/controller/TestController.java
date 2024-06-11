@@ -6,6 +6,7 @@ import com.example.feignclient.restApi.RestApiTest2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.feignclient.service.TestService ;
 
 import java.util.ArrayList;
 
@@ -20,13 +21,11 @@ import java.util.ArrayList;
 public class TestController {
 
     @Autowired
-    public RestApiTest2 restApiTest2 ;
+    public TestService testService ;
 
     @GetMapping("/objects")
     public ArrayList<User> getUserInfo() throws InterruptedException {
-
-        return restApiTest2.getUserInfo() ;
-
+        return testService.getUserInfo() ;
     }
 
     @GetMapping("/objects2")

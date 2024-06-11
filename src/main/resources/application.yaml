@@ -5,7 +5,7 @@ feign:
         connectTimeout: 500
         readTimeout: 500
         loggerLevel: full
-        errorDecoder: com.example.feignclient.error.FeignErrorDecoder
+        #errorDecoder: com.example.feignclient.error.FeignErrorDecoder
         #retryer: com.example.SimpleRetryer
           #requestInterceptors:
           #- com.example.FooRequestInterceptor

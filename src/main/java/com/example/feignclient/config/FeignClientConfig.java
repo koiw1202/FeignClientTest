@@ -11,8 +11,4 @@ import com.example.feignclient.error.FeignErrorDecoder ;
  */
 public class FeignClientConfig {
 
-    @Bean
-    public FeignErrorDecoder getFeignErrorDecoder(){
-        return new FeignErrorDecoder();
-    }
 }

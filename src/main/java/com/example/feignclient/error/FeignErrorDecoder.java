@@ -3,6 +3,7 @@ package com.example.feignclient.error;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
  * -----------------------------------------------------------
  * 2024-06-11        koiw1       최초 생성
  */
+@Component
 public class FeignErrorDecoder implements ErrorDecoder {
 
     @Override
@@ -24,13 +26,15 @@ public class FeignErrorDecoder implements ErrorDecoder {
             case 400:
                 break;
             case 404:
-                if(methodKey.contains("getOrders")){
+                if(methodKey.contains("getOrders")) {
                     return new ResponseStatusException(HttpStatus.valueOf(response.status()),
                             "User's orders is empty.");
                 }
-                break;
+
+                break ;
+
             default:
-                return new Exception(response.reason());
+                return new Exception(response.reason()) ;
         }
         return null;
     }
