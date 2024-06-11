@@ -1,9 +1,9 @@
-package com.example.feignclient;
+package com.example.feignclient.restApi;
 
+import com.example.feignclient.dto.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.net.http.HttpResponse;
 import java.util.ArrayList;
 
 /**
@@ -15,9 +15,9 @@ import java.util.ArrayList;
  */
 //FeignClient를 사용한 코드
 
-@FeignClient(name = "restApiTest", url = "https://api.restful-api.dev")
-public interface RestApiTest {
+@FeignClient(name = "restApiTest2", url = "http://localhost:8082")
+public interface RestApiTest2 {
 
-    @GetMapping("/objects")
+    @GetMapping("/objects2")
     ArrayList<User> getUserInfo() ;
 }

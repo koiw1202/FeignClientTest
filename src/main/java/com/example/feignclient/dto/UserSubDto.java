@@ -1,4 +1,4 @@
-package com.example.feignclient;
+package com.example.feignclient.dto;
 
 /**
  * description    :

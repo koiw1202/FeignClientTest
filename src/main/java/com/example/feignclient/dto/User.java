@@ -1,7 +1,4 @@
-package com.example.feignclient;
-
-import java.util.List;
-import java.util.Map;
+package com.example.feignclient.dto;
 
 /**
  * description    :
